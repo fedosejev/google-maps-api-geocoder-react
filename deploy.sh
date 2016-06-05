@@ -1,5 +1,7 @@
 #!/bin/bash
 
+NODE_ENV=production
+
 gulp build-for-production
 
 git commit -a -m "Update" && git push
