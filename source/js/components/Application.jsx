@@ -11,8 +11,8 @@ var INITIAL_LOCATION = {
 var Application = React.createClass({
 
   map: null,
-  geocoder: null,
   marker: null,
+  geocoder: null,
   
   getInitialState: function () {
     return {
