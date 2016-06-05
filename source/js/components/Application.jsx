@@ -66,7 +66,7 @@ var Application = React.createClass({
   handleFormSubmit: function (submitEvent) {
     submitEvent.preventDefault();
 
-    var address = searchInput.value;
+    var address = this.searchInput.value;
 
     this.geocodeAddress(address);
   },
@@ -93,6 +93,10 @@ var Application = React.createClass({
     this.geocoder = new google.maps.Geocoder();
   },
 
+  setSearchInput: function (inputReference) {
+    this.searchInput = inputReference;
+  },
+
   render: function () {
     return (
       <div className="container">
@@ -106,7 +110,7 @@ var Application = React.createClass({
 
                   <div className="form-group">
                     <label className="sr-only" htmlFor="address">Address</label>
-                    <input type="text" className="form-control input-lg" id="address" placeholder="London, United Kingdom" ref={function (ref) { this.searchInput = ref; }} required />
+                    <input type="text" className="form-control input-lg" id="address" placeholder="London, United Kingdom" ref={this.setSearchInput} required />
                   </div>
 
                 </div>
