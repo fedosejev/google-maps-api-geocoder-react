@@ -8,6 +8,11 @@ var INITIAL_LOCATION = {
   }
 };
 
+var ATLANTIC_OCEAN = {
+  latitude: 29.532804,
+  longitude: -55.491477
+};
+
 var Application = React.createClass({
 
   map: null,
@@ -39,6 +44,16 @@ var Application = React.createClass({
 
       this.setState({
         isGeocodingError: true
+      });
+
+      this.map.setCenter({
+        lat: ATLANTIC_OCEAN.latitude,
+        lng: ATLANTIC_OCEAN.longitude
+      });
+
+      this.marker.setPosition({
+        lat: ATLANTIC_OCEAN.latitude,
+        lng: ATLANTIC_OCEAN.longitude
       });
 
     }.bind(this));
