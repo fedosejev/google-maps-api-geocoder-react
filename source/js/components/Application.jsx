@@ -8,6 +8,8 @@ var INITIAL_LOCATION = {
   }
 };
 
+var INITIAL_MAP_ZOOM_LEVEL = 8;
+
 var ATLANTIC_OCEAN = {
   latitude: 29.532804,
   longitude: -55.491477
@@ -72,7 +74,7 @@ var Application = React.createClass({
     var mapElement = this.refs.map;
     
     this.map = new google.maps.Map(mapElement, {
-      zoom: 8,
+      zoom: INITIAL_MAP_ZOOM_LEVEL,
       center: {
         lat: INITIAL_LOCATION.position.latitude,
         lng: INITIAL_LOCATION.position.longitude
