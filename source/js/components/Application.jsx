@@ -109,7 +109,7 @@ var Application = React.createClass({
             {this.state.isGeocodingError ? <p className="bg-danger">Address not found.</p> : <p className="bg-info">{this.state.foundAddress}</p>}
 
             <div ref="map" className="map"></div>
-
+            
           </div>
         </div>
       </div>
