@@ -20,6 +20,7 @@ var Application = React.createClass({
   map: null,
   marker: null,
   geocoder: null,
+  searchInput: null,
   
   getInitialState: function () {
     return {
@@ -65,7 +66,7 @@ var Application = React.createClass({
   handleFormSubmit: function (submitEvent) {
     submitEvent.preventDefault();
 
-    var address = this.refs.address.value;
+    var address = searchInput.value;
 
     this.geocodeAddress(address);
   },
@@ -105,7 +106,7 @@ var Application = React.createClass({
 
                   <div className="form-group">
                     <label className="sr-only" htmlFor="address">Address</label>
-                    <input type="text" className="form-control input-lg" id="address" placeholder="London" ref="address" required />
+                    <input type="text" className="form-control input-lg" id="address" placeholder="London, United Kingdom" ref={function (ref) { this.searchInput = ref; }} required />
                   </div>
 
                 </div>
