@@ -20,7 +20,8 @@ var Application = React.createClass({
   map: null,
   marker: null,
   geocoder: null,
-  searchInput: null,
+  mapInputElement: null,
+  searchInputElement: null,
   
   getInitialState: function () {
     return {
@@ -66,13 +67,13 @@ var Application = React.createClass({
   handleFormSubmit: function (submitEvent) {
     submitEvent.preventDefault();
 
-    var address = this.searchInput.value;
+    var address = this.searchInputElement.value;
 
     this.geocodeAddress(address);
   },
 
   componentDidMount: function () {
-    var mapElement = this.refs.map;
+    var mapElement = this.mapElement;
     
     this.map = new google.maps.Map(mapElement, {
       zoom: INITIAL_MAP_ZOOM_LEVEL,
@@ -93,8 +94,12 @@ var Application = React.createClass({
     this.geocoder = new google.maps.Geocoder();
   },
 
-  setSearchInput: function (inputReference) {
-    this.searchInput = inputReference;
+  setSearchInputElementReference: function (inputReference) {
+    this.searchInputElement = inputReference;
+  },
+
+  setMapElementReference: function (mapElementReference) {
+    this.mapElement = mapElementReference;
   },
 
   render: function () {
@@ -110,7 +115,7 @@ var Application = React.createClass({
 
                   <div className="form-group">
                     <label className="sr-only" htmlFor="address">Address</label>
-                    <input type="text" className="form-control input-lg" id="address" placeholder="London, United Kingdom" ref={this.setSearchInput} required />
+                    <input type="text" className="form-control input-lg" id="address" placeholder="London, United Kingdom" ref={this.setSearchInputElementReference} required />
                   </div>
 
                 </div>
@@ -131,7 +136,7 @@ var Application = React.createClass({
 
             {this.state.isGeocodingError ? <p className="bg-danger">Address not found.</p> : <p className="bg-info">{this.state.foundAddress}</p>}
 
-            <div ref="map" className="map"></div>
+            <div className="map" ref={this.setMapElementReference}></div>
             
           </div>
         </div>
