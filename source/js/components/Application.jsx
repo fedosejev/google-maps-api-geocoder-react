@@ -101,7 +101,7 @@ var Application = React.createClass({
 
             <form className="form-inline" onSubmit={this.handleFormSubmit}>
               <div className="row">
-                <div className="col-sm-10">
+                <div className="col-xs-10">
 
                   <div className="form-group">
                     <label className="sr-only" htmlFor="address">Address</label>
@@ -109,7 +109,7 @@ var Application = React.createClass({
                   </div>
 
                 </div>
-                <div className="col-sm-2">
+                <div className="col-xs-2">
 
                   <button type="submit" className="btn btn-default btn-lg">
                     <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
