@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODE_ENV=production
+$NODE_ENV=production
 
 gulp build-for-production
 
