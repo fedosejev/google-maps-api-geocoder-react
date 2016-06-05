@@ -15,14 +15,7 @@ var ATLANTIC_OCEAN = {
   longitude: -55.491477
 };
 
-var Application = React.createClass({
-
-  map: null,
-  marker: null,
-  geocoder: null,
-  mapInputElement: null,
-  searchInputElement: null,
-  
+var Application = React.createClass({  
   getInitialState: function () {
     return {
       isGeocodingError: false,
