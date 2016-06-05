@@ -43,6 +43,7 @@ var Application = React.createClass({
       }
 
       this.setState({
+        foundAddress: null,
         isGeocodingError: true
       });
 
