@@ -1,0 +1,34 @@
+{
+  "name": "google-maps-api-geocoder-react",
+  "version": "1.0.0",
+  "description": "Example of using Google Maps JavaScript API Geocoder with React.js",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedosejev/google-maps-api-geocoder-react.git"
+  },
+  "author": "Artemij Fedosejev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedosejev/google-maps-api-geocoder-react/issues"
+  },
+  "homepage": "https://github.com/fedosejev/google-maps-api-geocoder-react#readme",
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-html-minifier": "^0.1.6",
+    "gulp-uglify": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.2",
+    "react": "^15.0",
+    "react-dom": "^15.0"
+  }
+}
