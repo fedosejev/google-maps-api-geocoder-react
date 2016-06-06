@@ -1,6 +1,7 @@
 # Example of using Google Maps JavaScript API Geocoder with React.js 
 
-See it in action: http://fedosejev.github.io/google-maps-api-geocoder-react
++ Tutorial: http://react.tips/reactjs-and-geocoding/
++ See it in action: http://fedosejev.github.io/google-maps-api-geocoder-react
 
 ## Install
 
