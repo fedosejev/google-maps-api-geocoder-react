@@ -6,8 +6,9 @@ export NODE_ENV=production
 # Run Gulp task
 gulp build-for-production
 
-# Commit
-git commit -a -m "Update" && git push
+# Commit and push
+git add .
+git commit -m "Update" && git push
 
 # Publish on GitHub Pages
 git subtree push --prefix build origin gh-pages
